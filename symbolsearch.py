@@ -276,8 +276,6 @@ class SearchScrip:
                     return f"{symbol.upper()}{self.format_date(date_obj=expiry, output_type=DateFormat_3)}{option_type.upper()[0]}{strike_price}"
                 elif instrument == 'FUTCUR':
                     return f'{symbol.upper()}{self.format_date(date_obj=expiry, output_type=DateFormat_3)}F'
-                else:
-                    print("Please input instrument.")
             except Exception as e:
                 logger.debug("Error in construction of tradingsymbol :: {}".format(e))
         elif exch == 'BSE':
