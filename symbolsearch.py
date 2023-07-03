@@ -169,8 +169,7 @@ class SearchScrip:
             logger.info("Invalid Date Format")
 
     def search_scrip(self,
-                     exch: Literal['NSE','NFO','BSE','CDS','MCX']='NFO', 
-                     first_only: bool=False,
+                     exch: Literal['NSE','NFO','BSE','CDS','MCX']='NFO',
                      **kwargs: ScripParams) -> Union[str, tuple, dict]:
         try:
             if 'expiry' in kwargs:
