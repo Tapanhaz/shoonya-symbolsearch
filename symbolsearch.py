@@ -1,3 +1,11 @@
+'''
+            ::: description ::: Code to search symbols in Shoonya Scripsmaster
+            ::: author :::  Tapan Hazarika
+            ::: license :::  MIT
+'''
+__author__ = " Tapan Hazarika "
+
+
 import logging
 import os
 from typing import List, Union, TypedDict
