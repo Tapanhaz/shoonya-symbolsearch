@@ -1,3 +1,3 @@
 # shoonya-symbolsearch
 
-Please read the code ..
+Please read the Readme.pdf for detailed info.
