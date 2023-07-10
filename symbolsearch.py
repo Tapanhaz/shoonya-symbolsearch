@@ -111,7 +111,7 @@ class SearchScrip:
                 continue
         return pd.DataFrame()
 
-    @lru_cache(maxsize=None)
+    #@lru_cache(maxsize=None)
     def get_expiry(self,
                    exch: Literal['NFO','CDS','MCX']='NFO',
                    instrument: Literal['FUTIDX', 'FUTSTK', 'OPTIDX', 'OPTSTK', 'FUTCOM', 'OPTFUT', 'OPTCUR', 'FUTCUR']= 'OPTIDX',
