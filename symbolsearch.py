@@ -106,7 +106,7 @@ class SearchScrip:
                 df.to_csv(f"{exch}_symbols.csv", index=None)
                 self.config_data[exch] = self.current_date_str
                 return df
-            except (requests.HTTPError, Exception) as e:
+            except (requests.exceptions.RequestException, Exception) as e:
                 logger.debug(e)
                 continue
         return pd.DataFrame()
