@@ -14,7 +14,7 @@ import json
 import pandas as pd
 import requests
 from typing_extensions import Literal, NewType
-from functools import lru_cache
+#from functools import lru_cache
 from datetime import datetime, date
 
 logger = logging.getLogger(__name__)
@@ -107,7 +107,7 @@ class SearchScrip:
                 self.config_data[exch] = self.current_date_str
                 return df
             except (requests.exceptions.RequestException, Exception) as e:
-                logger.debug(e)
+                logger.debug("Error :: {}".format(e))
                 continue
         return pd.DataFrame()
 
@@ -290,7 +290,7 @@ class SearchScrip:
             try:
                 return symbol.upper()
             except Exception as e:
-                print("Error in construction of tradingsymbol :: {e}")
+                logger.debug("Error in construction of tradingsymbol :: {}".format(e))
 
     def get_lotsize(self,
                     exch: Literal['NFO','CDS','MCX']='NFO',
@@ -318,4 +318,13 @@ class SearchScrip:
             else:
                 print("Check parameters.")
         except Exception as e:
-            print("Error fetching lotsize :: {}".format(e))
+            logger.debug("Error fetching lotsize :: {}".format(e))
+    
+    def get_exchange(self, tradingsymbol: str) -> str:
+        try:
+            for exch in self.exch_list:
+                sym_df = self.get_symbols(exch=exch)
+                if tradingsymbol in sym_df['TradingSymbol'].values:
+                    return exch
+        except Exception as e:
+            logger.debug("Error fetching exchange name :: {}".format(e))
