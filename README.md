@@ -24,7 +24,7 @@ sc = SearchScrip()
 
     Now its needed to initialize symbols of the required exchanges. 
 
-    It will not not download the symbolmaster for a exchange within the same day unless
+    It will not not download the symbolmaster for a exchange within the same day twice unless
 
     it is specified by using hard_refresh=True
 
