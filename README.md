@@ -1,12 +1,15 @@
 # shoonya-symbolsearch
 
+<div class="cell markdown">
+    
+    Code for downloading and searching scrips in Shoonya symbolmaster 
 
+</div>
 
 <div class="cell code" execution_count="3">
 
 ``` python
 from symbolsearch import SearchScrip
-import logging
 ```
 
 </div>
