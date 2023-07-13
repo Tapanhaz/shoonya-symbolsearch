@@ -328,3 +328,16 @@ class SearchScrip:
                     return exch
         except Exception as e:
             logger.debug("Error fetching exchange name :: {}".format(e))
+
+    def get_strikediff(self,
+                       exch: Literal['NFO','CDS','MCX']='NFO',
+                       symbol: str= None) -> float:        
+        try:
+            sym_df = self.get_symbols(exch=exch)            
+            if symbol is not None:
+                strike_list = list(set(sym_df.query(f"Symbol in ['{symbol}']")['StrikePrice']))
+                filtered_strikes = sorted([i for i in strike_list if i > 0])
+                min_diff = min(np.diff(filtered_strikes))
+                return min_diff
+        except Exception as e:
+            logger.debug("Error fetching strikediff :: {}".format(e))
