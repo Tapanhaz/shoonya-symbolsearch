@@ -221,3 +221,62 @@ sc.get_lotsize(exch='NFO', symbol='BANKNIFTY', expiry='27-7-2023')
 </div>
 
 </div>
+
+<div class="cell markdown">
+    
+    get_exchange(tradingsymbol)
+
+    Returns the corresponding exchange name for the given tradingsymbol.
+
+</div>
+
+<div class="cell code" execution_count="17">
+
+``` python
+sc.get_exchange(tradingsymbol="BANKNIFTY27JUL23C52000")
+```
+
+<div class="output execute_result" execution_count="17">
+
+    'NFO'
+
+</div>
+
+</div>
+
+<div class="cell markdown">
+    
+    get_strikediff(exch,symbol)
+
+    Returns Option strikeprice difference for the given symbol. 'NFO' is the default exchange. 
+
+</div>
+
+<div class="cell code" execution_count="17">
+
+``` python
+sc.get_strikediff(symbol="HDFCBANK")
+```
+
+<div class="output execute_result" execution_count="17">
+
+    10.0
+
+</div>
+
+</div>
+
+<div class="cell code" execution_count="17">
+
+``` python
+sc.get_strikediff(exch='MCX', symbol='CRUDEOIL')
+```
+
+<div class="output execute_result" execution_count="17">
+
+    50.0
+
+</div>
+
+</div>
+
