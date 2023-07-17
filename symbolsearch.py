@@ -246,7 +246,9 @@ class SearchScrip:
         if exch == 'NSE':
             try:
                 if instrument.upper() == 'INDEX':
-                    return f"{symbol.split[0].capitalize()} {instrument.upper()}" 
+                    sym_df = self.get_symbols(exch='NSE')
+                    tsym = sym_df.query(f'Symbol in ["{symbol}"] and Instrument in ["{instrument}"]')["TradingSymbol"].iloc[0]
+                    return tsym
                 else:
                     return f"{symbol.upper()}-{instrument.upper()}"
             except Exception as e:
