@@ -1,3 +1,14 @@
+'''
+It checks the nearest BANKNIFTY expiry is within 6 days or not.
+*** The symbolsearch module will not download the symbolmaster again within the same day
+    once initialized 
+    unless ==>
+        1. The downloaded csv is deleted.
+        2. The search_config.json deleted.
+        3. Using hard_refresh=True when initializing symbols.
+'''
+
+
 from symbolsearch import SearchScrip
 from datetime import datetime
 from time import sleep
