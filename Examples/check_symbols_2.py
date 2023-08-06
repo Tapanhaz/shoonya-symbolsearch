@@ -1,5 +1,6 @@
 '''
 It checks the nearest BANKNIFTY expiry is within 6 days or not.
+If not it will try to redownload it. It should solve current shoonya's wrong symbolmaster error.
 *** The symbolsearch module will not download the symbolmaster again within the same day
     once initialized 
     unless ==>
