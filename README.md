@@ -1,5 +1,7 @@
 # shoonya-symbolsearch
 
+***This code needs python 3.11 to run correctly.***
+
 <div class="cell markdown">
     
     Code for downloading and searching scrips in Shoonya symbolmaster 
