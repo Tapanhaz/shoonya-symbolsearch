@@ -1,6 +1,6 @@
 # shoonya-symbolsearch
 
-***This code needs python 3.11 to run correctly.***
+***This code needs python 3.11 and latest pandas (above 2.0) to run correctly.***
 
 <div class="cell markdown">
     
